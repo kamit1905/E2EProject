@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="139" started-at="2021-01-17T08:57:50Z" finished-at="2021-01-17T08:57:50Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="139" started-at="2021-01-17T08:57:50Z" finished-at="2021-01-17T08:57:50Z">
+      <class name="Academy.AppTest">
+        <test-method status="PASS" signature="testApp()[pri:0, instance:testApp(Academy.AppTest)]" name="testApp" duration-ms="7" started-at="2021-01-17T14:27:50Z" finished-at="2021-01-17T14:27:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApp -->
+      </class> <!-- Academy.AppTest -->
+      <class name="com.app.E2E_Automation_Project.AppTest">
+        <test-method status="PASS" signature="testApp()[pri:0, instance:testApp(com.app.E2E_Automation_Project.AppTest)]" name="testApp" duration-ms="0" started-at="2021-01-17T14:27:50Z" finished-at="2021-01-17T14:27:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApp -->
+      </class> <!-- com.app.E2E_Automation_Project.AppTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
