@@ -1,4 +1,4 @@
-package Academy;
+package Resources;
 
 import java.io.IOException;
 
@@ -10,9 +10,6 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
-import Resources.ExtentReporterNG;
-import Resources.base;
 
 public class Listeners extends base implements ITestListener {
 	ExtentTest test;
@@ -34,7 +31,7 @@ public class Listeners extends base implements ITestListener {
 		// TODO Auto-generated method stub
 		//Screenshot
 		extentTest.get().fail(result.getThrowable());
-		WebDriver driver =null;
+		//WebDriver driver = null;
 		String testMethodName =result.getMethod().getMethodName();
 		
 		try {
@@ -44,8 +41,8 @@ public class Listeners extends base implements ITestListener {
 			
 		}
 		try {
-			extentTest.get().addScreenCaptureFromPath(getScreenShotPath(testMethodName,driver), result.getMethod().getMethodName());
-			
+			//extentTest.get().addScreenCaptureFromPath(getScreenShotPath(testMethodName,driver), result.getMethod().getMethodName());
+			extentTest.get().addScreenCaptureFromPath(getScreenShotPath(testMethodName, driver),result.getMethod().getMethodName());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -53,7 +50,7 @@ public class Listeners extends base implements ITestListener {
 	}
 
 	public void onTestSkipped(ITestResult result) {
-		// TODO Auto-generated method stub
+		extentTest.get().log(Status.SKIP, "Test Skipped");
 		
 	}
 
