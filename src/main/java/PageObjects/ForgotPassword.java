@@ -6,36 +6,24 @@ import org.openqa.selenium.WebElement;
 
 public class ForgotPassword {
 
-	
 	public WebDriver driver;
-	
-	By email=By.cssSelector("[id='user_email']");
-	By sendMeInstructions=By.cssSelector("[type='submit']");
-	
-	
-	
-	
-	
+
+	By email = By.cssSelector("[id='user_email']");
+	By sendMeInstructions = By.cssSelector("[type='submit']");
+
 	public ForgotPassword(WebDriver driver) {
 		// TODO Auto-generated constructor stub
-		
-		this.driver=driver;
-		
+
+		this.driver = driver;
+
 	}
 
-
-	public WebElement getEmail()
-	{
+	public WebElement getEmail() {
 		return driver.findElement(email);
 	}
-	
-	public WebElement sendMeInstructions()
-	{
+
+	public WebElement sendMeInstructions() {
 		return driver.findElement(sendMeInstructions);
 	}
-	
-	
 
-	
-	
 }

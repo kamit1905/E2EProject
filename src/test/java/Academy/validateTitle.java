@@ -20,12 +20,15 @@ import Resources.base;
 
 public class validateTitle extends base{
 	public WebDriver driver;
+	LandingPage l;
 	 public static Logger log =LogManager.getLogger(base.class.getName());
 	@BeforeTest
 	public void initialize() throws IOException
 	{
-	
+		l=new LandingPage(driver);
 		 driver =initializeDriver();
+		//initializeDriver();
+		 System.out.println("driver in testclass "+driver);
 		 log.info("Driver is initialized");
 			
 		driver.get(prop.getProperty("url"));
@@ -38,7 +41,7 @@ public class validateTitle extends base{
 		
 		//one is inheritance
 		// creating object to that class and invoke methods of it
-		LandingPage l=new LandingPage(driver);
+		//LandingPage l=new LandingPage(driver);
 		//compare the text from the browser with actual text.- Error..
 		Assert.assertEquals(l.getTitle().getText(), "FEATURED CO123URSES");
 		 log.info("Successfully validated Text message");
